@@ -16,7 +16,7 @@ let ball = {
 }
 
 function preload() {
-    font = loadFont('assets/fonts/inconsolata.ttf');
+    font = loadFont('assets/fonts/Inconsolata.ttf');
 }
 
 function setup() {
