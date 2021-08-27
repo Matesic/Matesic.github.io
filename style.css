@@ -1,10 +1,10 @@
 @font-face {
-    font-family: inconsolata;
+    font-family: Inconsolata;
     src: url('assets/fonts/Inconsolata.ttf');
 }
 
 @font-face {
-    font-family: inconsolata-bold;
+    font-family: Inconsolata-bold;
     src: url('assets/fonts/Inconsolata-bold.ttf');
 }
 
@@ -40,7 +40,7 @@ nav {
     height: inherit;
     overflow: hidden;
     white-space: nowrap;
-    font-family: inconsolata-bold;
+    font-family: Inconsolata-bold;
     fint-size: 1vw;
     color: #000;
     text-decoration: none;
@@ -53,7 +53,7 @@ nav {
 
 .item-title {
     font-size: 3vw;
-    font-family: inconsolata;
+    font-family: Inconsolata;
     cursor: default;
 }
 
