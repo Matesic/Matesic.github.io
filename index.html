@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <title>Fran Matešić</title>
 
-    <script src="../lib/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
     <script src="utils.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../assets/icons/account.png">
 </head>
 
-<body>
-    <nav id="navbar" class="navbar light">
+<body class="light-theme">
+    <nav id="navbar" class="navbar">
         <a class="item item-title">
             <p>Fran Matešić</p>
         </a>
@@ -21,23 +22,29 @@
             <img class="icon" src="../assets/icons/home.png">
             <span>home</span>
         </a>
-        <a href="#career" class="item item-hover">
-            <img class="icon" src="../assets/icons/career.png">
-            <span>career</span>
-        </a>
         <a href="#education" class="item item-hover">
             <img class="icon" src="../assets/icons/education.png">
             <span>education</span>
         </a>
+        <a href="#career" class="item item-hover">
+            <img class="icon" src="../assets/icons/career.png">
+            <span>career</span>
+        </a>
         <a href="#certificate" class="item item-hover">
-            <img class="icon" src="../assets/icons/certificate.png">
-            <span>certificate</span>
+            <img class="icon" src="../assets/icons/award.png">
+            <span>awards</span>
         </a>
         <a href="#info" class="item item-hover">
             <img class="icon" src="../assets/icons/info.png">
             <span>info</span>
         </a>
     </nav>
+    <button id="theme" class="theme">
+        <img class="icon-small" src="../assets/icons/sun.png">
+    </button>
+    <div id="copyright" class="copyright">
+        <p></p>
+    </div>
 </body>
 
 

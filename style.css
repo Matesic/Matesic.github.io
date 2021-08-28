@@ -8,7 +8,18 @@
     src: url('assets/fonts/Inconsolata-bold.ttf');
 }
 
+:root {
+    --accent: #305C91;
+}
+
+* {
+    font-family: Inconsolata;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    background-color: var(--backgroundColor);
     margin: 0px;
 }
 
@@ -21,6 +32,8 @@ main {
 }
 
 nav {
+    transition: background-color 0.5s ease, color 0.2s ease;
+    background-color: var(--menuColor);
     display: inline-flex;
     position: absolute;
     top: 3%;
@@ -28,6 +41,7 @@ nav {
     width: 80%;
     height: 6vw;
     overflow-x: auto;
+    z-index: 10;
 }
 
 .item {
@@ -40,26 +54,55 @@ nav {
     height: inherit;
     overflow: hidden;
     white-space: nowrap;
-    font-family: Inconsolata-bold;
     fint-size: 1vw;
-    color: #000;
+    color: var(--fontColor);
     text-decoration: none;
 }
 
-.item-hover:hover {
-    background-color: #305C91;
-    color: #FFF;
-}
-
 .item-title {
+    color: var(--fontColor);
     font-size: 3vw;
-    font-family: Inconsolata;
     cursor: default;
 }
 
 .item-active {
-    background-color: #79A1D2;
-    color: #FFF;
+    background-color: var(--menuActive);
+    color: var(--fontColor);
+}
+
+.item-hover:hover {
+    background-color: var(--menuHover);
+}
+
+.theme {
+    transition: background-color 0.5s ease, color 0.2s ease;
+    display: inline-flex;
+    position: fixed;
+    right: 3%;
+    top: 3%;
+    background-color: inherit;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.theme:hover {
+    cursor: pointer;
+}
+
+.copyright {
+    transition: background-color 0.5s ease, color 0.2s ease;
+    display: inline-flex;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    background-color: inherit;
+    color: var(--fontColor);
+    padding: 3px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    z-index: 10;
 }
 
 .icon {
@@ -67,12 +110,59 @@ nav {
     height: 4vw;
 }
 
-.light {
-    background-color: #DBE2EF;
-    color: #000;
+.icon-small {
+    width: 3vw;
+    height: 3vw;
 }
 
-.dark {
-    background-color: #112D4E;
-    color: #FFF;
+.item-hover:hover .icon {
+    filter: invert(1);
+}
+
+.item-hover:hover span {
+    filter: invert(1);
+}
+
+.item-active .icon {
+    filter: invert(1);
+}
+
+.item-active span {
+    filter: invert(1);
+}
+
+.dark-theme .item .icon {
+    filter: invert(1);
+}
+
+.dark-theme .item-hover:hover .icon {
+    filter: invert(0);
+}
+
+.dark-theme .item-hover:hover span {
+    filter: invert(1);
+}
+
+.dark-theme .item-active .icon {
+    filter: invert(0);
+}
+
+.dark-theme .item-active:hover span {
+    filter: invert(1);
+}
+
+.light-theme {
+    --backgroundColor: #F5F5F5;
+    --fontColor: #282828;
+    --menuColor: #B8C7E0;
+    --menuActive: #3E5B8E;
+    --menuHover: #4E72B1;
+}
+
+.dark-theme {
+    --backgroundColor: #282828;
+    --fontColor: #F5F5F5;
+    --menuColor: #254974;
+    --menuActive: #6494CE;
+    --menuHover: #376DAE;
 }
